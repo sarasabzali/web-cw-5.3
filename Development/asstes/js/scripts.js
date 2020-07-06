@@ -1,30 +1,52 @@
-let counter = document.querySelector(".counter");
-const decreaseCount = document.querySelector("#countButton");
-const resetCount = document.querySelector("#resetButton");
+let counter = document.querySelector("#countButton");
+const resetCount = document.querySelector("#reset");
 
 // أكمل
 // const athkar =
 
-const randomThekr = document.querySelector("#thekr");
-randomThekr.addEventListener("click", changeDisplayedThekr);
+// const randomThekr = document.querySelector("#athkar");
 
-// count عرف متغير
+// document.getElementById('btn-thekr').innerHTML = randomThekr
+// // count عرف متغير
+// document.getElementById('athkar').innerHTML = athkar;
 
-decreaseCount.addEventListener("click", decrementCounter);
-resetCount.addEventListener("click", resetCounter);
+// // decreaseCount.addEventListener("click", decrementCounter);
+// resetCount.addEventListener("click", resetCounter);
 
+// randomThekr.addEventListener("click", changeDisplayedThekr);
+let athkars = ["سبحان الله", "الحمدلله", "الله اكبر"];
+
+
+// 
+let count = 10;
 function decrementCounter() {
+count = counter.innerHTML;
+
+if (count != 0){
+  count = count - 1;
+}
+counter.innerHTML = count;
   // أكمل
-  counter.innerHTML = count;
   // أضف خواص للقيمة داخل زر العداد حتى لا تظهر فجأة ولكن بالتدريج
 }
 
 // Hide
+
+
 function resetCounter() {
-  // أكمل
+  counter.innerHTML = 10 ;
 }
 
 // Hide
+
+let count2 = 0
 function changeDisplayedThekr() {
-  // أكمل
-}
+let random = Math.floor(Math.random() *athkars.length);
+  document.getElementById('athkar').innerHTML = athkars[random];
+  }
+  
+//  // let athkars = math.floor(math.floor()*athkars.length)
+  // console.log(random)
+
+
+  // let random = Math.floor(Math.random)()*athkars.length)
